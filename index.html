@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery</title>
+		<meta charset="UTF-8" />
+
+		<style>
+		.btn {
+			display: inline-block;
+			padding: 8px 12px;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.428571429;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			cursor: pointer;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			}
+
+		.btn-success {
+			color: #ffffff;
+			background-color: #5cb85c;
+			border-color: #5cb85c;
+			}
+		.btn-primary {
+			color: #ffffff;
+			background-color: #5C8CB8;
+			border-color: #4CA1C9;
+			}
+		</style>
+<script src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('#test').click(function(event){
+			event.preventDefault();
+			alert('Hello');
+		});
+
+		$(".superbutton").click(function(event){
+			event.preventDefault();
+			$(".experimental").removeClass("btn-primary");
+			$(".experimental").addClass("btn-success");
+		
+		});
+	});
+
+</script>
+	</head>
+	<body>	
+		
+		<a href="#" id="test">Test link</a>
+
+		<a class="superbutton btn">Super button</a>
+
+		<br/>
+		<br/>
+
+		<a class="experimental btn btn-primary">I am experimental button</a>
+	</body>
+</html>
